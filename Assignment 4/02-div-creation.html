@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Div</title>
+  <style>
+    .custom-box {
+      padding: 1rem;
+      margin-top: 1rem;
+      background-color: #f1f1f1;
+      border: 2px dashed #333;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    button {
+      padding: 8px 16px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Dynamic Div Creation</h2>
+  <button onclick="createDiv()">Create Div</button>
+  <div id="container"></div>
+
+  <script>
+    function createDiv() {
+      const newDiv = document.createElement("div");
+      newDiv.className = "custom-box";
+      newDiv.textContent = "This is a new dynamic div!";
+      document.getElementById("container").appendChild(newDiv);
+    }
+  </script>
+</body>
+</html>
